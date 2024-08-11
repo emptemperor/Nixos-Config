@@ -17,7 +17,7 @@
   outputs = { self, nixpkgs, ... }@inputs:
     let
       lib = nixpkgs.lib;
-      system = "x84_64-linux";
+      system = "x86_64-linux";
       pkgs = import nixpkgs {
         inherit system;
         config = {
