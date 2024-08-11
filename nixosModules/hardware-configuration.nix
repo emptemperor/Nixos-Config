@@ -45,7 +45,7 @@
       fsType = "zfs";
     };
 
-  fileSystems."/mnt/boot" =
+  fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/93E5-F903";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
