@@ -48,4 +48,4 @@ read -rp "Enter git rev for flake (default: main): " git_rev
 echo "Reinstalling NixOS"
 # nixos minimal iso does not have git add your own repo
 nix-shell -p git nixFlakes --command \
-    "sudo nixos-install --flake \"github:emptemperor/Nixos-Config/${git_rev:-main}#nixos\""
+    "sudo nixos-install --flake \"github:emptemperor/Nixos-Config/${git_rev:-main}#$nixos\""
