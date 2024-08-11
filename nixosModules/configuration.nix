@@ -14,7 +14,7 @@
   # programs.home-manager.enable = true;
 
   # Bootloader.
-  boot.loader.grub = {
+  boot.loader = {
    systemd-boot.enable = true;
    efi.canTouchEfiVariables = true;
   };   
