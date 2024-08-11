@@ -14,15 +14,9 @@
   # programs.home-manager.enable = true;
 
   # Bootloader.
-  # boot.loader.grub.enable = true;
-  # boot.loader.grub.device = "/dev/sda";
-  # boot.loader.grub.useOSProber = true;
   boot.loader.grub = {
-   
-   enable = true;
-   devices = ["nodev"];
-   useOSProber = true;
-   efiSupport = true;
+   systemd-boot.enable = true;
+   efi.canTouchEfiVariables = true;
   };   
 
 
