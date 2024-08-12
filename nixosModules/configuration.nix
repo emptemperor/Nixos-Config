@@ -19,6 +19,8 @@
    efi.canTouchEfiVariables = true;
   };   
 
+  #ZFS ID
+  networking.hostId = "071d5faa";
 
 
   networking.hostName = "nixos"; # Define your hostname.
