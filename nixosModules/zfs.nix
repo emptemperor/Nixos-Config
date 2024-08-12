@@ -27,9 +27,36 @@ swapDevices = [ { device = "/dev/disk/by-label/SWAP"; } ];
     "/" = {
       device = "/dev/disk/by-uuid/YOUR-ROOT-UUID";
       fsType = "zfs";
-      # Add any additional options you might need
+      neededForBoot = true;
     };
-    # Define other file systems as needed
+
+    # boot partition
+    "/boot" = {
+      device = "/dev/disk/by-label/NIXBOOT";
+      fsType = "vfat";
+    };
+
+    "/nix" = {
+      device = "zroot/nix";
+      fsType = "zfs";
+    };
+
+    "/tmp" = {
+      device = "zroot/tmp";
+      fsType = "zfs";
+    };
+
+    "/persist" = {
+      device = "zroot/persist";
+      fsType = "zfs";
+      neededForBoot = true;
+    };
+
+    "/persist/cache" = {
+      device = "zroot/cache";
+      fsType = "zfs";
+      neededForBoot = true;
+    };
   };
 
 
