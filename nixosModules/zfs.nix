@@ -13,7 +13,7 @@
         # Use by-id for intel cpu
         devNodes =
         "dev/disk/by-id";
-        package = pkgs.zfs_unstable;
+        package = pkgs.zfs-unstable;
         requestEncryptionCredentials = true; 
        };
   }; 
