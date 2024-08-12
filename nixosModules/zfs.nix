@@ -12,7 +12,7 @@
        zfs = {
         # Use by-id for intel cpu
         devNodes =
-        "dev/disk/by-id";
+        "/dev/disk/by-id";
         package = pkgs.zfs_unstable;
         requestEncryptionCredentials = true; 
        };
