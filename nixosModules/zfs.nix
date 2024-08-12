@@ -21,6 +21,16 @@
 # 16GB swap
 swapDevices = [ { device = "/dev/disk/by-label/SWAP"; } ];
 
+{
+  # Define your file systems
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-uuid/YOUR-ROOT-UUID";
+      fsType = "zfs";
+      # Add any additional options you might need
+    };
+    # Define other file systems as needed
+  };
 
 
 }
