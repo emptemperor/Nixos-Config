@@ -21,7 +21,6 @@
 # 16GB swap
 swapDevices = [ { device = "/dev/disk/by-label/SWAP"; } ];
 
-{
   # Define your file systems
   fileSystems = {
     "/" = {
