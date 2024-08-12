@@ -143,8 +143,6 @@ else
 fi
 sudo mount --mkdir -t zfs zroot/persist /mnt/persist
 
-# Manually Generate Hardware after Moutning
-sudo nixos-generate-config --no-filesystems --root /mnt
 
 read -rp "Enter git rev for flake (default: main): " git_rev
 echo "Installing NixOS"
