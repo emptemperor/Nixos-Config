@@ -8,7 +8,7 @@
   boot = {
     # booting with zfs
     supportedFilesystems.zfs = true;
-    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    kernelPackages = pkgs.linuxPackages_xanmod;
        zfs = {
         # Use by-id for intel cpu
         devNodes =
