@@ -14,7 +14,7 @@
         devNodes =
         "dev/disk/by-id";
         package = pkgs.zfs_unstable;
-        requestEncryptionCredentials = cfg.encryption = true; 
+        requestEncryptionCredentials = true; 
        };
   }; 
 
