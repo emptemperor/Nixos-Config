@@ -5,6 +5,7 @@
  {
    imports = [
       ./configuration.nix
+      ./zfs.nix
  
    ];
  } 
