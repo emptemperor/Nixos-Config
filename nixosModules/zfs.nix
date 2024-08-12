@@ -22,9 +22,12 @@
 swapDevices = [ { device = "/dev/disk/by-label/SWAP"; } ];
 
   # Define your file systems
+  # standardized filesystem layout
   fileSystems = {
+    # NOTE: root and home are on tmpfs
+    # root partition, exists only as a fallback, actual root is a tmpfs
     "/" = {
-      device = "/dev/disk/by-uuid/YOUR-ROOT-UUID";
+      device = "zroot/root";
       fsType = "zfs";
       neededForBoot = true;
     };
