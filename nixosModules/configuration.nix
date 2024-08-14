@@ -65,6 +65,7 @@
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
+  
 
   # Configure keymap in X11
   services.xserver = {
@@ -117,9 +118,10 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim # The Nano editor is also installed by default.
+     # The Nano editor is also installed by default.
     wget
-    git 
+    git
+    neovim 
     
   ];
 
