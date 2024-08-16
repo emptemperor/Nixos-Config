@@ -5,8 +5,8 @@
     services.xserver.videoDrivers = ["nvidia"];
 
     hardware.nvidia = {
-       # Modsetting is necessary
-       modsetting.enable = true;
+       # Modesetting is necessary
+       modesetting.enable = true;
 
        # Power Management
        powerManagement.enable = false;
