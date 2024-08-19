@@ -128,6 +128,7 @@
     wget
     git
     neovim 
+    tree
     
   ];
 
