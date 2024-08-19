@@ -61,5 +61,19 @@ swapDevices = [ { device = "/dev/disk/by-label/SWAP"; } ];
     };
   };
 
+    # Create snapsnots through sanoid
+    services.sanoid = {
+      enable = true;
+       
+      # data sets for persist
+      datasets = {
+        "zroot/persist" = {
+          hourly = 50;
+	  daily = 15;
+	  weekly = 3;
+	  monthly = 1;
+	};
+      };
+    };
 
 }
