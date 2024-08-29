@@ -129,7 +129,8 @@
     git
     neovim 
     tree
-    
+    fastfetch
+    obsidian
   ];
 
 
