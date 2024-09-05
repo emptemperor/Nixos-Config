@@ -116,14 +116,14 @@
         persistCfg = config.environment.persistence."/persist";
         persistCacheCfg = config.environment.persistence."/persist/cache";
         allDirectories =
-          map (getDirPath "/persist") (persistCfg.directories ++ persistCfg.users.${user}.directories)
+          map (getDirPath "/persist") (persistCfg.directories ++ persistCfg.users.emptemz.directories)
           ++ map (getDirPath "/persist/cache") (
-            persistCacheCfg.directories ++ persistCacheCfg.users.${user}.directories
+            persistCacheCfg.directories ++ persistCacheCfg.users.emptemz.directories
           );
         allFiles =
-          map (getFilePath "/persist") (persistCfg.files ++ persistCfg.users.${user}.files)
+          map (getFilePath "/persist") (persistCfg.files ++ persistCfg.users.emptemz.files)
           ++ map (getFilePath "/persist/cache") (
-            persistCacheCfg.files ++ persistCacheCfg.users.${user}.files
+            persistCacheCfg.files ++ persistCacheCfg.users.emptemz.files
           );
         sort-u = arr: lib.concatLines (lib.sort lib.lessThan (lib.unique arr));
       in
