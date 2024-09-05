@@ -6,6 +6,9 @@
     # Flake url.
     nixpkgs.url = "nixpkgs/nixos-24.05";
 
+    # impermenance url
+    impermanence.url = "github:nix-community/impermanence";
+
     # home-manager
     home-manager = {
      # Specify version is not using unstable.
