@@ -13,7 +13,7 @@
      persist = { 
        root = { 
          directories = mkOption {
-           type = type.listOf types.str;
+           type = types.listOf types.str;
 	   default = [ ];
 	   description = "Directories to persist in root filesystem";
 	 };
