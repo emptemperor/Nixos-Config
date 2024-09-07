@@ -6,7 +6,7 @@
    
   let 
     cfg = config.custom.persist;
-    hmPersistCfg = config.hm.custom.persist;
+    
   in
   {
    options.custom = with lib; {
@@ -72,8 +72,8 @@
     # I will leave this for future cases
     #security.sudo.extraConfig = "Defaults Lecture=never";
     
-    # persistence enviornment 
-    enviorment.persistence = {
+    # persistence environment 
+    environment.persistence = {
       "/persist" = {
         hideMounts = true;
         files = [ "/etc/machine-id" ] ++ cfg.root.files;
@@ -83,7 +83,7 @@
 	] ++ cfg.root.directories;
 
         users.emptemz = {
-	   files = cfg.home.files ++ hmPersistCfg.home.files;
+	   files = cfg.home.files; 
 	   directories = [
 	    "Downloads"
 	    "Music"
@@ -95,7 +95,7 @@
 	    ".gitconfig"
 	    { directory = ".ssh"; mode = "0700"; }
 	    { directory = ".local/share/keyrings"; mode = "0700"; }
-	   ] ++ cfg.home.directories ++ hmPersistCfg.home.directories;
+	   ] ++ cfg.home.directories;
 	};
       };
        
@@ -104,7 +104,7 @@
 	inherit (cfg.root.cache) directories files;
 	
 	users.emptemz = {
-	  inherit (hmPersistCfg.home.cache) directories files;
+	  
 	};
        };
       };
