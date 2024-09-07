@@ -6,7 +6,7 @@
    
   let 
     cfg = config.custom.persist;
-    
+    hmPersistCfg = config.home-manager.custom.persist; 
   in
   {
    options.custom = with lib; {
@@ -95,7 +95,7 @@
 	    ".gitconfig"
 	    { directory = ".ssh"; mode = "0700"; }
 	    { directory = ".local/share/keyrings"; mode = "0700"; }
-	   ] ++ cfg.home.directories;
+	   ] ++ cfg.home.directories ++ hmPersistCfg.home.directories; 
 	};
       };
        
@@ -103,11 +103,13 @@
         hideMounts = true;
 	inherit (cfg.root.cache) directories files;
 	
-	# users.emptemz = {};
+	 users.emptemz = {
+           inherit (hmPersistCfg.home.cache) directories files;		
+	 };
        };
       };
 
-      hm.xdg.dataFile."impermanence.txt".text =
+      home-manager.users.emptemz.xdg.dataFile."impermanence.txt".text =
       let
         getDirPath = prefix: d: "${prefix}${d.dirPath}";
         getFilePath = prefix: f: "${prefix}${f.filePath}";
