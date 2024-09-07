@@ -103,9 +103,7 @@
         hideMounts = true;
 	inherit (cfg.root.cache) directories files;
 	
-	users.emptemz = {
-	  
-	};
+	# users.emptemz = {};
        };
       };
 
