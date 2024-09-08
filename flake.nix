@@ -35,8 +35,10 @@
       nixos = lib.nixosSystem {
         specialArgs = {inherit inputs system;};
         modules = [ 
+	  inputs.impermanence.nixosModules.impermanence
 	  ./nixosModules/default.nix
           ./flakeModules/default.nix
+	  # ./homeModules/default.nix
 	];
       };
     };	
