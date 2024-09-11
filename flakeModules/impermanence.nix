@@ -96,6 +96,24 @@
 	    { directory = ".ssh"; mode = "0700"; }
 	    { directory = ".local/share/keyrings"; mode = "0700"; }
 	   ] ++ cfg.home.directories ++ hmPersistCfg.home.directories; 
+	   files = [
+	     
+	     ".dotfiles/Nixos-Config/flake.nix"
+	     ".dotfiles/Nixos-Config/flake.lock"
+	     ".dotfiles/Nixos-Config/install.sh"
+	     ".dotfiles/Nixos-Config/recover.sh"
+	     ".dotfiles/Nixos-Config/nixosModules/default.nix"
+	     ".dotfiles/Nixos-Config/nixosModules/configuration.nix"
+	     ".dotfiles/Nixos-Config/nixosModules/hardware-configuration.nix"
+	     ".dotfiles/Nixos-Config/nixosModules/zfs.nix"
+	     ".dotfiles/Nixos-Config/nixosModules/nvidia.nix"
+	     ".dotfiles/Nixos-Config/flakeModules/default.nix"
+	     ".dotfiles/Nixos-Config/flakeModules/home-manager.nix"
+	     ".dotfiles/Nixos-Config/flakeModules/impermanence.nix"
+	     ".dotfiles/Nixos-Config/homeModules/default.nix"
+	     ".dotfiles/Nixos-Config/homeModules/home.nix"
+	     ".dotfiles/Nixos-Config/homeModules/impermanence.nix"
+	   ];
 	};
       };
        
