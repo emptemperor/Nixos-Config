@@ -58,7 +58,11 @@
 	     ".dotfiles/Nixos-Config/wallpapers/castlevania.png"
 	     ".dotfiles/Nixos-Config/nixosModules/default.nix"
 	     ".dotfiles/Nixos-Config/nixosModules/hardware-configuration.nix"
+<<<<<<< HEAD:homeModules/home.nix
        	     ".dotfiles/Nixos-Config/nixosModules/home-manager.nix"
+=======
+             ".dotfiles/Nixos-Config/nixosModules/home-manager.nix"
+>>>>>>> 619059e (fixed dots):home.nix
              ".dotfiles/Nixos-Config/nixosModules/hyprland.nix"
 	     ".dotfiles/Nixos-Config/nixosModules/impermanence.nix"
              ".dotfiles/Nixos-Config/nixosModules/nvidia.nix"
@@ -77,6 +81,17 @@
 	     ".dotfiles/Nixos-Config/homeModules/modules/programs.nix"
 	     ".dotfiles/Nixos-Config/homeModules/terminal/default.nix"
 	     ".dotfiles/Nixos-Config/homeModules/terminal/kitty.nix"
+<<<<<<< HEAD:homeModules/home.nix
+=======
+
+
+
+
+
+
+
+
+>>>>>>> 619059e (fixed dots):home.nix
 	   ];
 >>>>>>> 17724f0f968fa241f7edfc6f54a51e4628fbc061:home.nix
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
