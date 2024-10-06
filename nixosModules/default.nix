@@ -11,7 +11,7 @@
       ./nvidia.nix
       ./home-manager.nix
       ./impermanence.nix
-      ./catppuccin.nix
+      
  
    ];
  } 

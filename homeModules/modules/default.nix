@@ -8,7 +8,6 @@
 	 
 	 imports = [
 	   ./packages.nix
-	   ./themes.nix
 	   ./programs.nix
 
 	 ];
