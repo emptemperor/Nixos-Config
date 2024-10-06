@@ -18,7 +18,7 @@
 	   "$terminal" = "kitty";
 	   "$monitor" = "btop";
 
-	   monitor ", 2880x1620@120, 0x0, 1";
+	   monitor = ", 2880x1620@120, 0x0, 1";
 	  
 	   #exec-once[ ];
 	   
