@@ -9,9 +9,6 @@
     # impermenance url
     impermanence.url = "github:nix-community/impermanence";
 
-    #hyprland url, for binaries. 
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-
     # home-manager
     home-manager = {
      # Specify version is not using unstable.
@@ -39,9 +36,8 @@
         specialArgs = {inherit inputs system;};
         modules = [ 
 	  inputs.impermanence.nixosModules.impermanence
-	  #./nixosModules/default.nix
-	  ./configuration.nix
-          #./flakeModules/default.nix
+	  ./nixosModules/default.nix
+          ./flakeModules/default.nix
 	  # ./homeModules/default.nix
 	];
       };
