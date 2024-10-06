@@ -9,6 +9,7 @@
       ./hyprland.nix
       ./nvidia.nix
       ./home-manager.nix
+      ./impermanence.nix
  
    ];
  } 
