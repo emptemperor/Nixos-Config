@@ -2,7 +2,7 @@
 	# this serves as general settings for hyprland,
 	# for key bindings, they will be in keybindings.nix
 
-	{ pkgs, lib, inputs, ... }
+	{ config, lib, ... }:
 	{
 	 options.hyprland.settings = lib.mkEnableOption "settings";
 	 #enable hyprland in home-manager,
