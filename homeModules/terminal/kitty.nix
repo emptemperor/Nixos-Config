@@ -4,8 +4,8 @@
 { config, lib, pkgs, ... }:
 
 {
-  options.guiPrograms.kitty = lib.mkEnableOption "kitty";
-  config = lib.mkIf config.guiPrograms.kitty {
+  options.terminal.kitty = lib.mkEnableOption "kitty";
+  config = lib.mkIf config.terminal.kitty {
 
     programs.kitty = {
       enable = true;

@@ -35,7 +35,6 @@
     modules = lib.mkIf config.modules.enable {
       packages = lib.mkDefault true;
       programs = lib.mkDefault true;
-      themes = lib.mkDefault false;
     };
 
    };	
