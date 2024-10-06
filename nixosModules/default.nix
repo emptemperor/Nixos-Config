@@ -4,7 +4,7 @@
 
  {
    imports = [
-      ./configuration.nix
+      #./configuration.nix
       ./zfs.nix
       ./hyprland.nix
       ./nvidia.nix
