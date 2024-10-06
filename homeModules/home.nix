@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, lib, inputs, user, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -36,9 +36,49 @@
     # '')
   ];
 
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
+<<<<<<< HEAD:homeModules/home.nix
   home.file = {
+=======
+  home.file = { files = [
+	   
+	     #post this
+	     ".dotfiles/Nixos-Config/flake.nix"
+	     ".dotfiles/Nixos-Config/flake.lock"
+	     ".dotfiles/Nixos-Config/install.sh"
+	     ".dotfiles/Nixos-Config/recover.sh"
+	     ".dotfiles/Nixos-Config/configuration.nix"
+	     ".dotfiles/Nixos-Config/home.nix"
+	     ".dotfiles/Nixos-Config/wallpapers/castlevania.png"
+	     ".dotfiles/Nixos-Config/nixosModules/default.nix"
+	     ".dotfiles/Nixos-Config/nixosModules/hardware-configuration.nix"
+       	     ".dotfiles/Nixos-Config/nixosModules/home-manager.nix"
+             ".dotfiles/Nixos-Config/nixosModules/hyprland.nix"
+	     ".dotfiles/Nixos-Config/nixosModules/impermanence.nix"
+             ".dotfiles/Nixos-Config/nixosModules/nvidia.nix"
+	     ".dotfiles/Nixos-Config/nixosModules/zfs.nix"
+	     ".dotfiles/Nixos-Config/homeModules/default.nix"
+	     ".dotfiles/Nixos-Config/homeModules/impermanence.nix"
+	     ".dotfiles/Nixos-Config/homeModules/hyprland/animations.nix"
+	     ".dotfiles/Nixos-Config/homeModules/hyprland/default.nix"
+             ".dotfiles/Nixos-Config/homeModules/hyprland/dependencies.nix"
+	     ".dotfiles/Nixos-Config/homeModules/hyprland/hyprpaper.nix"
+             ".dotfiles/Nixos-Config/homeModules/hyprland/keybindings.nix"
+             ".dotfiles/Nixos-Config/homeModules/hyprland/settings.nix"
+	     ".dotfiles/Nixos-Config/homeModules/hyprland/windowrules.nix"
+             ".dotfiles/Nixos-Config/homeModules/modules/default.nix"
+             ".dotfiles/Nixos-Config/homeModules/modules/packages.nix"
+	     ".dotfiles/Nixos-Config/homeModules/modules/programs.nix"
+	     ".dotfiles/Nixos-Config/homeModules/terminal/default.nix"
+	     ".dotfiles/Nixos-Config/homeModules/terminal/kitty.nix"
+	   ];
+>>>>>>> 17724f0f968fa241f7edfc6f54a51e4628fbc061:home.nix
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.

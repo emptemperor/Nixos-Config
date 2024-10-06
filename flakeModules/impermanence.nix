@@ -6,7 +6,7 @@
    
   let 
     cfg = config.custom.persist;
-    #hmPersistCfg = config.home-manager.users.emptemz.custom.persist; 
+    hmPersistCfg = config.home-manager.users.emptemz.custom.persist; 
   in
   {
    options.custom = with lib; {
