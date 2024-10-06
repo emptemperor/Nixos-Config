@@ -5,10 +5,9 @@
 	{ config, lib, ... }:
 	{
 	 options.hyprland.settings = lib.mkEnableOption "settings";
+	 config = lib.mkIf config.hyprland.settings {
 	 #enable hyprland in home-manager,
-	 wayland.windowManager.hyprland = {
-	   enable = true;	
-	 };
+	 wayland.windowManager.hyprland.enable = true;	
 	 wayland.windowManager.hyprland.settings = {
           
 	 #Some of these are subjected to be added later.
@@ -80,8 +79,6 @@
 	     font_family = "JetBrainsMonoNerdFont";
 	     vrr = 1;	
 	   };
-
-
-
+	 };
 	 };
 	}
