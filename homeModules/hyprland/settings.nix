@@ -37,7 +37,7 @@
 
 	   #general settings
 	   general = {
-	     border size = 3;
+	     border_size = 3;
 	     gaps_in = 2;
 	     gaps_out = 6;
 	     layout = "dwindle";
