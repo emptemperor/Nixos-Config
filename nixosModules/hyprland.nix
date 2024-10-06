@@ -2,7 +2,7 @@
 
 	{
 	 options.hyprland.enable = lib.mkEnableOption "enables hyprland";
-	 config = libmkIf config.hyprland.enable {
+	 config = lib.mkIf config.hyprland.enable {
 	   
 	   nix.settings = {
 	     # cachix for flake usage of hyprland.
