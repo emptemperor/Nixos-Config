@@ -4,6 +4,7 @@
 
 	{ pkgs, lib, inputs, ... }
 	{
+	 options.hyprland.settings = lib.mkEnableOption "settings";
 	 #enable hyprland in home-manager,
 	 wayland.windowManager.hyprland = {
 	   enable = true;	
