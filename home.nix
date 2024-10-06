@@ -49,6 +49,11 @@
     modules.enable = true;
     terminal.enable = true;
 
+    xdg.userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = { files = [
