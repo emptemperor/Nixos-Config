@@ -6,11 +6,8 @@
    
   let 
     cfg = config.custom.persist;
-<<<<<<< HEAD
     hmPersistCfg = config.home-manager.users.emptemz.custom.persist; 
-=======
     #hmPersistCfg = config.home-manager.users.emptemz.custom.persist; 
->>>>>>> 619059e (fixed dots)
   in
   {
    options.custom = with lib; {
@@ -96,7 +93,6 @@
 	    "Videos"
 	    "CS_2113_work"
 	    ".dotfiles/Nixos-Config"
-<<<<<<< HEAD
 	    ".gitconfig"
 	    { directory = ".ssh"; mode = "0700"; }
 	    { directory = ".local/share/keyrings"; mode = "0700"; }
@@ -119,12 +115,10 @@
 	     ".dotfiles/Nixos-Config/homeModules/home.nix"
 	     ".dotfiles/Nixos-Config/homeModules/impermanence.nix"
 	   ];
-=======
 	    "gitconfig"
 	    { directory = ".ssh"; mode = "0700"; }
 	    { directory = ".local/share/keyrings"; mode = "0700"; }
 	   ] ++ cfg.home.directories ++ hmPersistCfg.home.directories;   
->>>>>>> 619059e (fixed dots)
 	};
       };
        
