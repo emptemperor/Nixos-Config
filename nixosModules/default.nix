@@ -6,10 +6,10 @@
    imports = [
       ./configuration.nix
       ./zfs.nix
-      ./hyprland.nix
-      ./nvidia.nix
-      ./home-manager.nix
-      ./impermanence.nix
+      #./hyprland.nix
+      #./nvidia.nix
+      #./home-manager.nix
+      #./impermanence.nix
       
  
    ];
