@@ -10,7 +10,7 @@
       extraSpecialArgs = {inherit inputs;};
       #users.emptemz.custom.persist
       users.emptemz.imports = [
-        ../homeModules/default.nix
+        ./homeModules/default.nix
     
      ];
     };	
