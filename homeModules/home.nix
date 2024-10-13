@@ -46,8 +46,9 @@
 
 
   home.file = {
-	Nixos-Config = {
-	      source = ./Nixos-Config;
+	".dotfiles/Nixos-Config" = {
+	      source = config.lib.file.mkOutOfStoreSymlink
+	      "${config.home.homeDirectory}/.dotfiles/Nixos-Config";
 	      recursive = true;
 	};
 	   
