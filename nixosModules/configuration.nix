@@ -30,7 +30,7 @@
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.wireless.networks = {
 	UNsTabLe = {
-	  psk = "11K!2gc3f!";
+	  psk = "11K!ddddd";
 	};
 	
   };
@@ -77,6 +77,8 @@
      wayland.enable = true;
      package = pkgs.kdePackages.sddm;	   
   };
+
+  
 
   programs.hyprland = {
 	enable = true;
