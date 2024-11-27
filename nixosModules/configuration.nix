@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./zfs.nix
       ./nvidia.nix
+      ./persist/nets.nix
       # inputs.home-manager.nixosModules.home-manager
     ];
 
@@ -28,12 +29,7 @@
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.wireless.networks = {
-	UNsTabLe = {
-	  psk = "11K!ddddd";
-	};
-	
-  };
+  
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
