@@ -27,7 +27,13 @@
 
 
   networking.hostName = "nixos"; # Define your hostname.
-  #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.wireless.networks = {
+	UNsTabLe = {
+	  psk = "11K!2gc3f!";
+	};
+	
+  };
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -37,7 +43,7 @@
   boot.zfs.requestEncryptionCredentials = true;
 
   # Enable networking
-  networking.networkmanager.enable = true;
+  #networking.networkmanager.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/New_York";
@@ -61,16 +67,31 @@
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
+  services.xserver.enable = false;
+
+  
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm = {
      enable = true;
      wayland.enable = true;
-     
+     package = pkgs.kdePackages.sddm;	   
+  };
+
+  programs.hyprland = {
+	enable = true;
+	xwayland.enable = true;
+	package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+	portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
+
+  #clearly this is painful
+  nix.settings = {
+	substituters = ["https://hyprland.cachix.org"];
+	trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
   
-  #services.desktopManager.plasma6.enable = true;
+ #services.desktopManager.plasma6.enable = true;
 
   
 

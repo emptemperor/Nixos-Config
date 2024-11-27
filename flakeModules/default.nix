@@ -4,7 +4,7 @@
 	{
 	 imports = [
 	     ./home-manager.nix
-	     ./impermanence.nix
+	     #./impermanence.nix
 	 ];	
 
 	}

@@ -1,6 +1,16 @@
 { config, pkgs, lib, inputs, user, ... }:
 
 {
+
+  imports = [./hyprland/default.nix];
+
+  # hm gets to configure hyprland	
+  wayland.windowManager.hyprland = {
+	enable = true;
+	xwayland.enable = true;
+	systemd.enable = true;
+  };	
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "emptemz";

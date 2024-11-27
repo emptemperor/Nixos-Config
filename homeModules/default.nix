@@ -7,7 +7,7 @@
   {
     imports = [
       ./home.nix
-      ./impermanence.nix
+     # ./impermanence.nix
     ];
 
 

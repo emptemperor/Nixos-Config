@@ -8,6 +8,7 @@
       useGlobalPkgs = true;
       useUserPackages = true;
       extraSpecialArgs = {inherit inputs;};
+      backupFileExtension = "backup";
       #users.emptemz.custom.persist
       users.emptemz.imports = [
         ../homeModules/default.nix
